@@ -8,7 +8,7 @@
 
 #import "CustomScanView.h"
 #import <AVFoundation/AVFoundation.h>
-#import "Masonry.h"
+#import <Masonry.h>
 
 
 //屏幕的宽度
