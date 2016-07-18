@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.author       = { "weiyang" => "meng852163550@163.com" }
     s.platform     = :ios, "6.0"
     s.source       = { :git => "https://github.com/lfgGitHub/CustomScanView.git", :tag => "0.0.1" }
-    s.source_files  = "CustomScanView", "*.{h,m}"
+    s.source_files  = "CustomScanView", "CustomScanProject/CustomScanView/*.{h,m}"
     s.requires_arc = true
     s.dependency "Masonry", "~> 0.6.0"
 
