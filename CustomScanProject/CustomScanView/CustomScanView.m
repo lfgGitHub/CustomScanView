@@ -8,8 +8,8 @@
 
 #import "CustomScanView.h"
 #import <AVFoundation/AVFoundation.h>
-//#import <Masonry.h>
-#import "Masonry.h"
+#import <Masonry.h>
+
 
 //屏幕的宽度
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
