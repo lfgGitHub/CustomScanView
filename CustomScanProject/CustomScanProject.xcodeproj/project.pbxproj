@@ -660,6 +660,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9049DC1F9F5E5D4F31503AE0 /* Pods-CustomScanProject.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CustomScanProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -677,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A25ED5648085F7516D40E96 /* Pods-CustomScanProject.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CustomScanProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
