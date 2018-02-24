@@ -2,8 +2,8 @@
 //  CustomScanView.h
 //  MVVMTest
 //
-//  Created by 李富贵 on 16/7/7.
-//  Copyright © 2016年 李富贵. All rights reserved.
+//  Created by Mr.Li on 16/7/7.
+//  Copyright © 2016年 Mr.Li. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -19,10 +19,10 @@ typedef void(^ScanResult)(id result);
 
 @interface CustomScanView : UIViewController
 
-@property(nonatomic,assign)SkipWay skipWay;
+@property(assign, nonatomic) SkipWay skipWay;
 
 //扫描结果回调
-@property(copy,nonatomic)ScanResult scanResult;
+@property(copy, nonatomic) ScanResult scanResult;
 
 //关闭页面
 -(void)close;

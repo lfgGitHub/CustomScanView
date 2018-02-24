@@ -2,8 +2,8 @@
 //  CustomScanView.m
 //  MVVMTest
 //
-//  Created by 李富贵 on 16/7/7.
-//  Copyright © 2016年 李富贵. All rights reserved.
+//  Created by Mr.Li on 16/7/7.
+//  Copyright © 2016年 Mr.Li. All rights reserved.
 //
 
 #import "CustomScanView.h"
@@ -29,8 +29,12 @@
 //判断是ipad
 #define IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
+#define is_iPhoneX [UIScreen mainScreen].bounds.size.width == 375.0f && [UIScreen mainScreen].bounds.size.height == 812.0f
+
+////状态栏高度
+#define STATUSBAR_HEIGHT (is_iPhoneX ? 44.0 : 20.0)
 //导航栏高度
-#define NAV_HEIGHT ScreenWidth>667?(44*1.5+20):(44+20)
+#define NAV_HEIGHT    (STATUSBAR_HEIGHT + 44)
 
 //字体适配
 #define fontSize(font) ScreenWidth<=320?[UIFont systemFontOfSize:font]:IPHONE6?[UIFont systemFontOfSize:(font+2)]:[UIFont systemFontOfSize:(font+3)]
@@ -143,7 +147,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         make.left.mas_equalTo(navView).offset(15);
         make.width.mas_lessThanOrEqualTo(@200);
         make.bottom.mas_equalTo(navView);
-        make.top.mas_equalTo(navView).offset(20);
+        make.top.mas_equalTo(navView).offset(STATUSBAR_HEIGHT);
     }];
     
     if(UMSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0"))
@@ -161,7 +165,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             make.right.mas_equalTo(navView).offset(-15);
             make.width.mas_lessThanOrEqualTo(@200);
             make.bottom.mas_equalTo(navView);
-            make.top.mas_equalTo(navView).offset(20);
+            make.top.mas_equalTo(navView).offset(STATUSBAR_HEIGHT);
         }];
     }
 }
